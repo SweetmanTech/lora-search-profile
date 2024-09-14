@@ -1,5 +1,5 @@
 import SearchBarPage from '@/components/SearchBarPage'
 
-export default function Home() {
-  return <SearchBarPage />
-}
+const Search = () => <SearchBarPage />
+
+export default Search

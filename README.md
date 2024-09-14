@@ -15,10 +15,7 @@ Lora Search Profile is a lightweight application that allows users to search and
 
 1. Use node v20 with `nvm use 20`.
 2. Run the following command in the root of the codebase to install the dependencies: `yarn install`.
-3. Set up the required environment variables:
-   - Create a `.env.local` file in the root directory
-   - Add the necessary environment variables (e.g., API keys, endpoints)
-4. Run the following command to start the dev server: `yarn dev`.
+3. Run the following command to start the dev server: `yarn dev`.
 
 ## Authors
 

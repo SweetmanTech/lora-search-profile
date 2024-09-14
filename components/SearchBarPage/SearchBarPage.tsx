@@ -13,6 +13,8 @@ const SearchBarPage = () => {
   const [activeFilters, setActiveFilters] = useState(['Ethereum'])
   const { results, search, setSearch } = useProfileSearch()
 
+  console.log('SWEETS results', results)
+
   const toggleFilter = (filter) => {
     setActiveFilters((prev) =>
       prev.includes(filter) ? prev.filter((f) => f !== filter) : [...prev, filter],
@@ -51,17 +53,15 @@ const SearchBarPage = () => {
             </div>
             {results.map((result) => (
               <div
-                key={result.id}
+                key={result.profileId}
                 className="flex items-center p-2 hover:bg-gray-700 cursor-pointer"
               >
                 <Avatar className="w-10 h-10 mr-3">
-                  <AvatarImage
-                    src={`https://api.dicebear.com/6.x/initials/svg?seed=${result.title}`}
-                  />
+                  <AvatarImage src={result.avatar} />
                 </Avatar>
                 <div className="flex-grow">
-                  <div className="text-sm font-medium text-white">{result.title}</div>
-                  <div className="text-xs text-gray-400">{result.subtitle}</div>
+                  <div className="text-sm font-medium text-white">{result.displayName}</div>
+                  <div className="text-xs text-gray-400">{result.description}</div>
                 </div>
                 <Badge variant="secondary" className="ml-2">
                   {result.type}

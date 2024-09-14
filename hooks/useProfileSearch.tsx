@@ -1,29 +1,36 @@
 import { useEffect, useState } from 'react'
 
-// Mock data for demonstration
-const mockResults = [
-  { id: 1, title: 'LNRZ - FREE .03 [ sweetman.eth remix ]', subtitle: '0x02...5aef', type: 'NFT' },
-  {
-    id: 2,
-    title: 'Exploring the Developer-Creator Relationship with Sweetman.eth ...',
-    subtitle: '0xef...04db',
-    type: 'NFT',
-  },
-]
-
 const useProfileSearch = () => {
   const [results, setResults] = useState([])
   const [search, setSearch] = useState('')
 
   useEffect(() => {
-    if (search.length > 0) {
-      // In a real application, this would be an API call
-      setResults(
-        mockResults.filter((result) => result.title.toLowerCase().includes(search.toLowerCase())),
-      )
-    } else {
-      setResults([])
+    const fetchResults = async () => {
+      if (search.length > 0) {
+        try {
+          const fetchUrl = `/api/profile?address=${'0xcfBf34d385EA2d5Eb947063b67eA226dcDA3DC38'}`
+          console.log('SWEETS fetchUrl...', fetchUrl)
+
+          const response = await fetch(fetchUrl)
+          console.log('Response status:', response.status)
+
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`)
+          }
+
+          const data = await response.json()
+          console.log('SWEETS RESPONSE', data.zoraProfile.avatar)
+          setResults([data.zoraProfile])
+        } catch (error) {
+          console.error('Error fetching profile:', error)
+          setResults([])
+        }
+      } else {
+        setResults([])
+      }
     }
+
+    fetchResults()
   }, [search])
 
   return { results, search, setSearch }

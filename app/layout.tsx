@@ -1,5 +1,4 @@
 import '@/styles/globals.css'
-import '@coinbase/onchainkit/styles.css'
 import { Analytics } from '@vercel/analytics/react'
 import { ReactNode } from 'react'
 import Providers from '@/providers/Providers'

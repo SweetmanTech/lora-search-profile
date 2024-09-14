@@ -1,5 +1,5 @@
-import { redirect } from 'next/navigation'
+import SearchBarPage from '@/components/SearchBarPage'
 
-export default function Home() {
-  redirect('/imagine.zora.eth')
-}
+const Search = () => <SearchBarPage />
+
+export default Search

@@ -23,11 +23,8 @@ const SearchBarPage = () => {
   const [search, setSearch] = useState('')
   const [results, setResults] = useState([])
   const [activeFilters, setActiveFilters] = useState(['Ethereum'])
-  console.log('SWEETS search', search)
 
   useEffect(() => {
-    console.log('SWEETS SEARCHING', search)
-
     if (search.length > 0) {
       // In a real application, this would be an API call
       setResults(

@@ -13,8 +13,6 @@ const SearchBarPage = () => {
   const [activeFilters, setActiveFilters] = useState(['Ethereum'])
   const { results, search, setSearch } = useProfileSearch()
 
-  console.log('SWEETS results', results)
-
   const toggleFilter = (filter) => {
     setActiveFilters((prev) =>
       prev.includes(filter) ? prev.filter((f) => f !== filter) : [...prev, filter],

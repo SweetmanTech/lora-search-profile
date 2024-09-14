@@ -1,39 +1,17 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Input } from '@/components/ui/Input'
 import { SearchIcon } from 'lucide-react'
 import { Avatar, AvatarImage } from '@/components/ui/Avatar'
 import { Badge } from '../ui/Badge'
-
-// Mock data for demonstration
-const mockResults = [
-  { id: 1, title: 'LNRZ - FREE .03 [ sweetman.eth remix ]', subtitle: '0x02...5aef', type: 'NFT' },
-  {
-    id: 2,
-    title: 'Exploring the Developer-Creator Relationship with Sweetman.eth ...',
-    subtitle: '0xef...04db',
-    type: 'NFT',
-  },
-]
+import useProfileSearch from '@/hooks/useProfileSearch'
 
 const filterOptions = ['Ethereum', 'Optimism', 'Base', 'Zora', 'POAP']
 
 const SearchBarPage = () => {
-  const [search, setSearch] = useState('')
-  const [results, setResults] = useState([])
   const [activeFilters, setActiveFilters] = useState(['Ethereum'])
-
-  useEffect(() => {
-    if (search.length > 0) {
-      // In a real application, this would be an API call
-      setResults(
-        mockResults.filter((result) => result.title.toLowerCase().includes(search.toLowerCase())),
-      )
-    } else {
-      setResults([])
-    }
-  }, [search])
+  const { results, search, setSearch } = useProfileSearch()
 
   const toggleFilter = (filter) => {
     setActiveFilters((prev) =>

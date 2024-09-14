@@ -8,7 +8,8 @@ const useProfileSearch = () => {
     const fetchResults = async () => {
       if (search.length > 0) {
         try {
-          const fetchUrl = `/api/profile?address=${'0xcfBf34d385EA2d5Eb947063b67eA226dcDA3DC38'}`
+          const encodedSearch = encodeURIComponent(search)
+          const fetchUrl = `/api/profile?address=${encodedSearch}`
           console.log('SWEETS fetchUrl...', fetchUrl)
 
           const response = await fetch(fetchUrl)

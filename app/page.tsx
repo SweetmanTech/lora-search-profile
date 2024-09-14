@@ -1,5 +1,3 @@
-import { redirect } from 'next/navigation'
-
 export default function Home() {
-  redirect('/imagine.zora.eth')
+  return <div>LORA SEARCH PROFILE</div>
 }

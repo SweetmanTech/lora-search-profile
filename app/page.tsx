@@ -1,3 +1,5 @@
+import SearchBarPage from '@/components/SearchBarPage'
+
 export default function Home() {
-  return <div>LORA SEARCH PROFILE</div>
+  return <SearchBarPage />
 }

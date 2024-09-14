@@ -1,6 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 /** @type {import('tailwindcss').Config} */
-import path from 'node:path'
 
 module.exports = {
   darkMode: ['class'],

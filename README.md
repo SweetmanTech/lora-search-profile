@@ -1,11 +1,10 @@
 # Lora Search Profile
 
-- lite profiles on zora
-  <img width="1440" alt="Screenshot 2024-08-26 at 9 55 10 PM" src="https://github.com/user-attachments/assets/7033fa1c-14a4-4c97-beeb-343bc0e15d14">
+- lite profile searching on zora
 
 ## Overview
 
-Lora Search Profile is a lightweight application that allows users to search and view profiles on various platforms. The main features include:
+Lora Search Profile is a lightweight application that allows users to search and view profiles across Zora. The main features include:
 
 1. Search any 0x... address, ENS, or Zora username
 2. See a preview of the results in the dropdown

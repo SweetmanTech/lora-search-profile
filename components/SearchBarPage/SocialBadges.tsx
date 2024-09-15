@@ -1,46 +1,36 @@
-import { Badge } from '../ui/Badge'
 import SocialBadge from './SocialBadge'
+import { FaTwitter, FaInstagram, FaGlobe } from 'react-icons/fa'
+import { SiFarcaster } from 'react-icons/si'
+import Image from 'next/image'
 
 const SocialBadges = ({ result }) => (
   <div className="mt-1 flex flex-wrap gap-1">
     {result.extension?.links?.twitter && (
-      <a
+      <SocialBadge
+        icon={FaTwitter}
         href={`https://twitter.com/${result.extension.links.twitter}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <SocialBadge platform="Twitter" username={result.extension.links.twitter} />
-      </a>
+      />
     )}
     {result.extension?.links?.instagram && (
-      <a
+      <SocialBadge
+        icon={FaInstagram}
         href={`https://instagram.com/${result.extension.links.instagram}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <SocialBadge platform="Instagram" username={result.extension.links.instagram} />
-      </a>
+      />
     )}
     {result.extension?.links?.farcaster && (
-      <a
+      <SocialBadge
+        icon={SiFarcaster}
         href={`https://warpcast.com/${result.extension.links.farcaster}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <SocialBadge platform="Farcaster" username={result.extension.links.farcaster} />
-      </a>
+      />
     )}
     {result.extension?.links?.website && (
-      <Badge variant="outline" className="ml-2 text-white border-white">
-        <a
-          href={result.extension.links.website}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white"
-        >
-          Website
-        </a>
-      </Badge>
+      <SocialBadge icon={FaGlobe} href={result.extension.links.website} />
+    )}
+    {result.username && (
+      <SocialBadge
+        icon={() => <Image src="/images/zorb.png" width={16} height={16} alt="Zora" />}
+        href={`https://zora.co/${result.username}`}
+      />
     )}
   </div>
 )

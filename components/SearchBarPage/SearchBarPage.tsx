@@ -9,6 +9,7 @@ import useProfileSearch from '@/hooks/useProfileSearch'
 const SearchBarPage = () => {
   const { results, search, setSearch } = useProfileSearch()
 
+  console.log('SWEETS RESULTS', results)
   return (
     <div className="w-full max-w-4xl mx-auto space-y-4 text-center">
       <h1 className="text-4xl font-bold text-white mb-2">Search a Zora Profile</h1>
@@ -32,8 +33,10 @@ const SearchBarPage = () => {
                 <Avatar className="w-10 h-10 mr-3">
                   <AvatarImage src={result.avatar} />
                 </Avatar>
-                <div className="flex-grow">
-                  <div className="text-sm font-medium text-white">{result.displayName}</div>
+                <div className="flex-grow text-left">
+                  <div className="text-sm font-medium text-white">
+                    {result.displayName || result.username || result.ensName || 'Unknown User'}
+                  </div>
                   <div className="text-xs text-gray-400">{result.description}</div>
                 </div>
                 <Badge variant="secondary" className="ml-2">

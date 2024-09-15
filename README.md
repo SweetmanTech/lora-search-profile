@@ -1,32 +1,64 @@
 # Lora Search Profile
 
-A lightweight, customizable profile search component for Zora.
+A lightweight, customizable React component for Zora profile search integration.
 
 ## Overview
 
-Lora Search Profile is a powerful and flexible application that allows developers to quickly implement a user-friendly profile search functionality across Zora. The main features include:
+Lora Search Profile is a powerful and flexible React component that allows developers to quickly implement a user-friendly profile search functionality for Zora. It's designed to be easily integrated into existing Next.js projects and provides a seamless way to search and display Zora user profiles.
 
-1. Search any 0x... address, ENS, or Zora username
-2. See a preview of the results in a customizable dropdown
-3. Responsive design with accessibility features
+## Quick Start
+
+1. Clone the repository:
+
+   ```
+   git clone git@github.com:SweetmanTech/lora-search-profile.git
+   cd lora-search-profile
+   ```
+
+2. Install dependencies:
+
+   ```
+   npm install
+   ```
+
+   or
+
+   ```
+   yarn
+   ```
+
+3. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+   or
+
+   ```
+   yarn dev
+   ```
+
+4. Open http://localhost:3000 with your browser to see the result.
+5. Customize the SearchBarPage component in your project as needed.
 
 ## Key Features
 
-- Built with Next.js 14 and TypeScript for optimal performance and type safety
-- Utilizes Tailwind CSS for easy styling and customization
-- Integrates with the myco.wtf API for profile data
-- Customizable UI components using Radix UI primitives
-- Easy to integrate into existing projects
+- **Versatile Search**: Search for Zora profiles using 0x... addresses, ENS names, or Zora usernames.
+- **Real-time Results**: See instant previews of search results in a customizable dropdown.
+- **Responsive Design**: Fully responsive with built-in accessibility features.
+- **Customizable UI**: Easy to style and adapt to your project's design system.
+- **Efficient API Integration**: Utilizes the myco.wtf API for fast and reliable profile data retrieval.
+- **TypeScript Support**: Built with TypeScript for improved developer experience and type safety.
+- **Next.js Ready**: Optimized for use with Next.js 14 and later versions.
 
-## Setup
+## API Integration
 
-1. Use node v20 with `nvm use 20`.
-2. Run the following command in the root of the codebase to install the dependencies: `yarn install`.
-3. Run the following command to start the dev server: `yarn dev`.
+Lora Search Profile uses the myco.wtf API to fetch Zora profile data. The API calls are handled internally, providing a seamless experience for developers.
 
 ## Customization
 
-Lora Search Profile is designed to be easily customizable. You can modify the UI components, styling, and API integration to fit your specific needs. Check the `components` and `styles` directories for more information.
+You can easily customize the appearance of the search component by modifying the provided Tailwind CSS classes or overriding them
 
 ## Authors
 

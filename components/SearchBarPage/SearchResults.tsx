@@ -1,5 +1,6 @@
 import { Avatar, AvatarImage } from '../ui/Avatar'
 import { Badge } from '../ui/Badge'
+import SocialBadges from './SocialBadges'
 
 const SearchResults = ({ results }) => (
   <div className="absolute w-full mt-2 bg-gray-800 rounded-lg shadow-lg overflow-hidden">
@@ -16,8 +17,9 @@ const SearchResults = ({ results }) => (
             {result.displayName || result.username || result.ensName || 'Unknown User'}
           </div>
           <div className="text-xs text-gray-400">{result.description}</div>
+          <SocialBadges result={result} />
         </div>
-        <Badge variant="secondary" className="ml-2">
+        <Badge variant="secondary" className="ml-2 text-white">
           {result.type}
         </Badge>
       </div>

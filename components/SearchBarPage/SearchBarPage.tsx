@@ -7,7 +7,6 @@ import SearchResults from './SearchResults'
 
 const SearchBarPage = () => {
   const { results, search, setSearch } = useProfileSearch()
-  console.log(results)
 
   return (
     <div className="w-full max-w-4xl mx-auto space-y-4 text-center">

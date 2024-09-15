@@ -11,8 +11,8 @@ const SearchBarPage = () => {
 
   return (
     <div className="w-full max-w-4xl mx-auto space-y-4 text-center">
-      <h1 className="text-4xl font-bold mb-2">Search a Zora Profile</h1>
-      <div className="relative">
+      <h1 className="text-4xl font-bold mb-2">Zora Profile Search</h1>
+      <div className="relative max-w-lg mx-auto">
         <Input
           type="text"
           placeholder="Search any username, ENS, or 0x..."

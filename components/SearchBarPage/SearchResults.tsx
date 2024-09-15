@@ -3,12 +3,9 @@ import { Badge } from '../ui/Badge'
 import SocialBadges from './SocialBadges'
 
 const SearchResults = ({ results }) => (
-  <div className="absolute w-full mt-2 bg-background rounded-lg shadow-lg overflow-hidden border border-black">
+  <div className="absolute w-full mt-2 bg-background rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-200 overflow-hidden border border-black">
     {results.map((result) => (
-      <div
-        key={result.profileId}
-        className="flex items-center p-2 hover:bg-gray-200 cursor-pointer"
-      >
+      <div key={result.profileId} className="flex items-center p-2">
         <Avatar className="w-10 h-10 mr-3">
           <AvatarImage src={result.avatar} />
         </Avatar>

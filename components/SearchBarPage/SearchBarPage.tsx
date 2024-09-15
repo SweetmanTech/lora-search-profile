@@ -18,7 +18,7 @@ const SearchBarPage = () => {
           placeholder="Search any username, ENS, or 0x..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full pl-10 pr-4 py-2 text-white bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+          className="w-full pl-10 pr-4 py-2 text-black bg-background rounded-lg border border-black focus:outline-none focus:ring-2 focus:ring-pink-500 shadow-md focus:shadow-lg transition-shadow duration-200"
         />
         <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
         {results.length > 0 && <SearchResults results={results} />}

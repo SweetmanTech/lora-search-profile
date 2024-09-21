@@ -16,10 +16,10 @@ export async function GET(request: Request) {
     }
     const data = await response.json()
     const stackClient = getStackClient()
-    const identififies = await stackClient.getTags(address, 'custom identity')
+    const identify = await stackClient.getTags(address, 'custom identity')
     return NextResponse.json({
       ...data,
-      connectedZoraProfile: identififies?.length > 0 ? true : false,
+      connectedZoraProfile: identify?.tagData.identity ? true : false,
     })
   } catch (error) {
     console.error('Error fetching profile:', error)
